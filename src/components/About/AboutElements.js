@@ -3,16 +3,13 @@ import styled from "styled-components";
 export const StyledAboutSection = styled.section`
   max-width: 100%;
   height: 100vh;
-  background: #000;
+  background: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .inner {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 50px;
-
-    @media (max-width: 768px) {
-      display: block;
-    }
+  @media (max-width: 768px) {
+    display: block;
   }
 
   & h2 {
@@ -20,32 +17,19 @@ export const StyledAboutSection = styled.section`
   }
 `;
 
-export const StyledText = styled.div`
-  color: white;
-  ul.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 0 10px;
-    padding: 0;
-    margin: 20px 0 0 0;
-    overflow: hidden;
-    list-style: none;
+export const AboutContent = styled.div`
+  z-index: 3;
+  max-width: 100vw;
+  position: absolute;
+  display: grid;
+  border: 3px solid white;
+  grid-template-columns: 3fr 2fr;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+`;
 
-    li {
-      position: relative;
-      margin-bottom: 10px;
-      padding-left: 20px;
-      font-family: var(--font-mono);
-      font-size: var(--fz-xs);
-
-      &:before {
-        content: "▹";
-        position: absolute;
-        left: 0;
-        color: var(--green);
-        font-size: var(--fz-sm);
-        line-height: 12px;
-      }
-    }
-  }
+export const AboutSummary = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
