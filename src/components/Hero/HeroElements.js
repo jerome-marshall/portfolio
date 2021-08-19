@@ -14,7 +14,7 @@ export const HeroContainer = styled.div`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  max-width: 100vw;
+  max-width: var(--max-width);
   position: absolute;
   padding: 8px 24px;
   display: flex;
@@ -24,20 +24,13 @@ export const HeroContent = styled.div`
   & p.myNameIs {
     margin-top: var(--margin-md);
     color: #fff;
-    font-size: var(--fz-lg);
+    font-size: var(--fz-md);
     text-align: center;
     max-width: 600px;
-
-    @media screen and (max-width: 768px) {
-      font-size: 20px;
-    }
-    @media screen and (max-width: 480px) {
-      font-size: 18px;
-    }
   }
 
   & h1.name {
-    color: #eee;
+    color: var(--color-white);
     font-size: 70px;
     text-align: start;
 
@@ -63,17 +56,18 @@ export const HeroContent = styled.div`
   }
 
   & p.summary {
-    margin-top: 24px;
+    margin-top: var(--margin-md);
     color: #999;
-    font-size: 18px;
+    font-size: var(--fz-lg);
     text-align: left;
     max-width: 600px;
+    line-height: var(--line-height-sm);
 
     @media screen and (max-width: 768px) {
-      font-size: 20px;
+      font-size: var(--fz-lg);
     }
     @media screen and (max-width: 480px) {
-      font-size: 18px;
+      font-size: var(--fz-md);
     }
   }
 `;
