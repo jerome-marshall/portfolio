@@ -27,24 +27,29 @@ const AboutSection = () => {
           <div className="summary">
             <p>
               Hello! My name is Jerome and I enjoy creating things that live on
-              the internet. My interest in Android App and Web Development
-              started back in 2017 when I decided to create a meme app — turns
-              out a meme app taught me a lot about development and digital
+              the internet. My interest in Android and Web Development started
+              back in 2017 when I decided to create a meme app — turns out a
+              meme app taught me a lot about development and digital
               experiences.
             </p>
             <br />
             <p>
               Fast-forward to today, I've had the privilege to train myself in
-              various bleeding edge technologies to create amazing digital
-              experiences. Currently I'm working at Cognizant as a Program
-              Analyst. But as development has become my paasion, I'm obliged to
-              getting smarter everyday. So when the oppurtunity arises, I could
+              various bleeding-edge technologies to create amazing digital
+              experiences. Currently, I'm working at Cognizant as a Program
+              Analyst. But as development has become my passion, I'm obliged to
+              get smarter every day. So when the opportunity arises, I could
               make the best use of my skills.
             </p>
             <br />
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="skills-list">
-              {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+              {skills &&
+                skills.map((skill, i) => (
+                  <li key={i}>
+                    <span>{skill}</span>
+                  </li>
+                ))}
             </ul>
           </div>
         </AboutSummary>

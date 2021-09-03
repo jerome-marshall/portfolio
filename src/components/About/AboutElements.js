@@ -54,6 +54,7 @@ export const AboutSummary = styled.div`
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
+    /* list-style-position: inside; */
     overflow: hidden;
     list-style: none;
 
@@ -62,6 +63,8 @@ export const AboutSummary = styled.div`
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
+      text-indent: 0px;
+
       /* font-family: var(--font-mono); */
       font-size: var(--fz-sm);
 
@@ -69,11 +72,16 @@ export const AboutSummary = styled.div`
         content: "▹";
         position: absolute;
         left: 0;
-        top: 5px;
+        /* top: 1px; */
         color: var(--green);
         font-size: var(--fz-sm);
-        line-height: 12px;
+        /* line-height: 15px; */
       }
+
+      /* span {
+        position: relative;
+        left: 5px;
+      } */
     }
   }
 `;

@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-100: #ddd;
     --color-grey-300: #bbb;
     --color-grey-500: #999;
+    --color-grey-700: #888;
     --color-grey-900: #777;
     --max-width: 1000px;
     --fz-xxs: 12px;
@@ -22,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --border-radius: 30px;
     --margin-md: 24px;
     --margin-lg: 32px;
+    --padding-xs: 14px;
     --padding-sm: 18px;
     --padding-md: 24px;
     --padding-lg: 32px;
