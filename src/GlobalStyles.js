@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     --padding-md: 24px;
     --padding-lg: 32px;
     --line-height-sm: 1.6;
+    --transition: all 0.3s ease-in-out;
   }
 `;
 export default GlobalStyles;

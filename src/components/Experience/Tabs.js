@@ -21,6 +21,7 @@ export const Tabs = ({ selectedTab, onChange, children }) => {
     };
 
     return React.cloneElement(child, {
+      key: child.props.value,
       active: child.props.value === selectedTab,
       onClick: handleClick,
     });

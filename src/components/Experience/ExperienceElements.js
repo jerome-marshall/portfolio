@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledExperienceSection = styled.section`
   max-width: 100%;
   height: 100vh;
-  background: #0c0c0c;
+  background: var(--background-dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,13 +53,31 @@ export const TabPanelContainer = styled.div`
     margin-left: -20px;
   } */
 
-  & p.title {
-    font-size: var(--fz-lg);
-    margin-bottom: 8px;
+  & h3 {
+    color: skyblue;
+    .title {
+      color: var(--color-white);
+      font-size: var(--fz-xl);
+      margin-bottom: 8px;
+    }
+
+    a.url {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      position: relative;
+      transition: var(--transition);
+      color: skyblue;
+      &:hover {
+        cursor: pointer;
+        color: #0088ff;
+      }
+    }
   }
 
   & p.expTime {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    margin-top: 5px;
     font-size: var(--fz-sm);
     color: var(--color-grey-300);
   }
@@ -71,7 +89,7 @@ export const TabPanelContainer = styled.div`
 
   & li {
     color: var(--color-grey-300);
-    font-size: var(--fz-sm);
+    font-size: var(--fz-md);
     margin-bottom: 8px;
     position: relative;
     line-height: 25px;
@@ -111,13 +129,7 @@ export const StylizedTab = styled.button`
   cursor: ${(p) => (p.disabled ? "default" : "pointer")};
   transition: all 0.3s ease-in-out;
 
-  //color
-  ${(p) =>
-    p.active &&
-    css`
-      color: var(--color-white);
-      border-left: 3px solid white;
-    `} /* ${(p) =>
+  /* ${(p) =>
     p.active
       ? css`
           color: var(--color-white);
@@ -127,7 +139,15 @@ export const StylizedTab = styled.button`
           color: var(--color-grey-900);
         `} */
 
-        :hover {
+  //color
+  ${(p) =>
+    p.active &&
+    css`
+      color: var(--color-white);
+      border-left: 3px solid white;
+    `}
+
+  :hover {
     /* transition: all 1s ease-in-out; */
     background-color: #333;
     color: var(--color-white);

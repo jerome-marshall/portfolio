@@ -7,12 +7,12 @@ import {
   TabsContainer,
 } from "./ExperienceElements";
 import { Tab, TabPanel, Tabs } from "./Tabs";
+import { workData } from "../../data/data";
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(0);
 
   const handleChange = (e, value) => {
-    console.log(e);
     setActiveTab(value);
   };
 
@@ -23,42 +23,48 @@ const Experience = () => {
         <Container>
           <TabsContainer>
             <Tabs selectedTab={activeTab} onChange={handleChange}>
-              <Tab lable="Cognizant" value={1}></Tab>
-              <Tab lable="Web Me Secure" value={2}></Tab>
-              <Tab lable="Tab 3" value={3}></Tab>
+              {workData &&
+                workData.map((data, i) => (
+                  <Tab
+                    key={data.company + "Tab"}
+                    lable={data.company}
+                    value={i}
+                  ></Tab>
+                ))}
             </Tabs>
           </TabsContainer>
           <TabPanelContainer>
-            <TabPanel value={activeTab} selectedIndex={1}>
-              <p className="title">Program Analyst @ Cognizant</p>
-              <p className="expTime">Nov 2020 - Present</p>
-              <ul>
-                {/* {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)} */}
-                <li>
-                  Completed a hands-on three-month training, trained in various
-                  technologies such as Java, Spring, Bootstrap, Docker, AWS.
-                </li>
-                <li>Supported in various roles as a support engineer</li>
-                <li>
-                  Contributed to managing the CI/CD pipeline of the project.
-                </li>
-                <li>
-                  Contributed to managing thsdfasdfasdffffffffffffsdffffffffffe
-                  CI/CD pipeline of the project.
-                </li>
-                <li>
-                  Contributed to managing the CI/CD ped fawef awe df aweg earfg
-                  ahr tgwaeoi ftha;og hapewufh ;asdkof n;alsmdnv ;oajgfh
-                  p;ouipeline of the project.
-                </li>
-              </ul>
-            </TabPanel>
-            <TabPanel value={activeTab} selectedIndex={2}>
-              Tab 2
-            </TabPanel>
-            <TabPanel value={activeTab} selectedIndex={3}>
-              Tab 3
-            </TabPanel>
+            {workData &&
+              workData.map((data, i) => {
+                const { title, url, company, range, description } = data;
+                return (
+                  <TabPanel
+                    key={company + "TabPanel"}
+                    value={activeTab}
+                    selectedIndex={i}
+                  >
+                    <h3>
+                      <span className="title">{title}</span>
+                      <span className="company">
+                        &nbsp;@&nbsp;
+                        <a
+                          href={url}
+                          className="url"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {company}
+                        </a>
+                      </span>
+                    </h3>
+                    <p className="expTime">{range}</p>
+                    <ul>
+                      {description &&
+                        description.map((desc, j) => <li key={j}>{desc}</li>)}
+                    </ul>
+                  </TabPanel>
+                );
+              })}
           </TabPanelContainer>
         </Container>
       </ExperienceContent>
