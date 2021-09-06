@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.div`
+export const ContactContainer = styled.div`
   background: var(--background-dark);
   display: flex;
   justify-content: center;
@@ -11,40 +11,28 @@ export const HeroContainer = styled.div`
   z-index: 1;
 `;
 
-export const HeroContent = styled.div`
+export const ContactContent = styled.div`
   z-index: 3;
-  max-width: var(--max-width);
+  max-width: 600px;
   position: absolute;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  & p.myNameIs {
+  & p.sub-title {
     margin-top: var(--margin-md);
-    color: #fff;
+    color: var(--grey-300);
     font-size: var(--fz-md);
     text-align: center;
-    max-width: 600px;
-  }
-
-  & h1.name {
-    color: var(--white);
-    font-size: 70px;
-    text-align: start;
-
-    @media screen and (max-width: 768px) {
-      font-size: 50px;
-    }
-    @media screen and (max-width: 480px) {
-      font-size: 38px;
-    }
+    width: 100%;
   }
 
   & h2 {
-    color: #aaa;
+    color: var(--white);
     font-size: 50px;
-    text-align: start;
+    width: 100%;
+    text-align: center;
 
     @media screen and (max-width: 768px) {
       font-size: 44px;
@@ -54,12 +42,11 @@ export const HeroContent = styled.div`
     }
   }
 
-  & p.summary {
+  & p.description {
     margin-top: var(--margin-md);
-    color: #999;
+    color: var(--grey-700);
     font-size: var(--fz-lg);
-    text-align: left;
-    max-width: 600px;
+    text-align: center;
     line-height: var(--line-height-sm);
 
     @media screen and (max-width: 768px) {
@@ -72,18 +59,20 @@ export const HeroContent = styled.div`
 `;
 
 export const Button = styled.button`
+  margin: 0 auto;
+  position: relative;
   margin-top: 3rem;
-  color: #fff;
+  color: var(--white);
   background: transparent;
   font-size: 18px;
-  text-align: left;
+  text-align: center;
   border-radius: var(--border-radius);
   border: solid white;
-  padding: 1.25rem 1.75rem;
+  padding: 1rem 1.75rem;
   transition: var(--transition);
 
   &:hover {
-    background: #fff;
+    background: var(--white);
     color: #010606;
   }
 `;

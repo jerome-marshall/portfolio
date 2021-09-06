@@ -107,11 +107,10 @@ export const NavBtnLink = styled(LinkR)`
   outline: none;
   border: solid white;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
   text-decoration: none;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
     background: var(--white);
     color: #010606;
   }
