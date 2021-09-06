@@ -7,7 +7,7 @@ import {
   TabsContainer,
 } from "./ExperienceElements";
 import { Tab, TabPanel, Tabs } from "./Tabs";
-import { workData } from "../../data/data";
+import { workData } from "../../data/wrokData";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);

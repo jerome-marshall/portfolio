@@ -4,6 +4,7 @@ import NavBar from "../components/Navbar/NavBar";
 import Hero from "../components/Hero/Hero";
 import AboutSection from "../components/About/About";
 import Experience from "../components/Experience/Experience";
+import Work from "../components/Work/Work";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <Experience />
+      <Work />
     </>
   );
 };
