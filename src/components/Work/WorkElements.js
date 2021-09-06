@@ -5,12 +5,12 @@ export const StyledWorkSection = styled.section`
   flex-direction: column;
   max-width: 100%;
   /* height: 100vh; */
-  padding-top: 70px;
   background: var(--background-dark);
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  color: var(--color-white);
+  color: var(--white);
+  padding: var(--nav-height) 0;
 
   @media (max-width: 768px) {
     display: block;
@@ -29,7 +29,7 @@ export const WorkContent = styled.div`
   align-items: center;
 
   & > h2 {
-    color: var(--color-white);
+    color: var(--white);
     margin: var(--margin-md) 0;
     font-size: var(--fz-heading-md);
   }
@@ -78,7 +78,7 @@ export const ProjectLI = styled.li`
     /* padding-left: 10px; */
 
     & a {
-      color: var(--color-white);
+      color: var(--white);
     }
 
     & svg {
@@ -106,7 +106,7 @@ export const ProjectLI = styled.li`
     }
 
     & p.description {
-      color: var(--color-grey-300);
+      color: var(--grey-300);
       margin-bottom: 30px;
     }
   }
@@ -120,7 +120,7 @@ export const ProjectLI = styled.li`
   }
 
   & li {
-    color: var(--color-grey-500);
+    color: var(--grey-500);
     font-size: var(--fz-xs);
     padding: 10px;
     transition: var(--transition);

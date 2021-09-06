@@ -24,10 +24,10 @@ export const ExperienceContent = styled.div`
   /* border: 3px solid white; */
   justify-content: center;
   align-items: flex-start;
-  color: var(--color-white);
+  color: var(--white);
 
   & > h2 {
-    color: var(--color-white);
+    color: var(--white);
     margin: var(--margin-md) 0;
     font-size: var(--fz-heading-sm);
   }
@@ -56,7 +56,7 @@ export const TabPanelContainer = styled.div`
   & h3 {
     color: skyblue;
     .title {
-      color: var(--color-white);
+      color: var(--white);
       font-size: var(--fz-xl);
       margin-bottom: 8px;
     }
@@ -79,7 +79,7 @@ export const TabPanelContainer = styled.div`
     margin-bottom: 25px;
     margin-top: 5px;
     font-size: var(--fz-sm);
-    color: var(--color-grey-300);
+    color: var(--grey-300);
   }
 
   & ul {
@@ -88,7 +88,7 @@ export const TabPanelContainer = styled.div`
   }
 
   & li {
-    color: var(--color-grey-300);
+    color: var(--grey-300);
     font-size: var(--fz-md);
     margin-bottom: 8px;
     position: relative;
@@ -101,7 +101,7 @@ export const TabPanelContainer = styled.div`
       position: absolute;
       left: 0;
       /* top: 5px; */
-      color: var(--color-white);
+      color: var(--white);
       font-size: var(--fz-sm);
       /* line-height: 15px; */
     }
@@ -116,7 +116,7 @@ export const TabHeaderContainer = styled.div`
 `;
 
 export const StylizedTab = styled.button`
-  color: var(--color-grey-700);
+  color: var(--grey-700);
   /* width: 8.5rem; */
   white-space: nowrap;
   padding: 12px 15px;
@@ -124,7 +124,7 @@ export const StylizedTab = styled.button`
   text-align: start;
   background-color: transparent;
   border: none;
-  border-left: 3px solid var(--color-grey-900);
+  border-left: 3px solid var(--grey-900);
   /* border-radius: var(--border-radius); */
   cursor: ${(p) => (p.disabled ? "default" : "pointer")};
   transition: all 0.3s ease-in-out;
@@ -132,25 +132,25 @@ export const StylizedTab = styled.button`
   /* ${(p) =>
     p.active
       ? css`
-          color: var(--color-white);
+          color: var(--white);
           border-left: 3px solid white;
         `
       : css`
-          color: var(--color-grey-900);
+          color: var(--grey-900);
         `} */
 
   //color
   ${(p) =>
     p.active &&
     css`
-      color: var(--color-white);
+      color: var(--white);
       border-left: 3px solid white;
     `}
 
   :hover {
     /* transition: all 1s ease-in-out; */
     background-color: #333;
-    color: var(--color-white);
+    color: var(--white);
   }
 `;
 

@@ -30,7 +30,7 @@ export const HeroContent = styled.div`
   }
 
   & h1.name {
-    color: var(--color-white);
+    color: var(--white);
     font-size: 70px;
     text-align: start;
 

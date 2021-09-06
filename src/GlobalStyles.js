@@ -4,12 +4,12 @@ const GlobalStyles = createGlobalStyle`
   html {
     --background-dark: #0c0c0c;
     --background-dark-highlight: #1f1f1f;
-    --color-white: #eee;
-    --color-grey-100: #ddd;
-    --color-grey-300: #bbb;
-    --color-grey-500: #999;
-    --color-grey-700: #888;
-    --color-grey-900: #777;
+    --white: #eee;
+    --grey-100: #ddd;
+    --grey-300: #bbb;
+    --grey-500: #999;
+    --grey-700: #888;
+    --grey-900: #777;
     --max-width: 1000px;
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
     --padding-lg: 32px;
     --line-height-sm: 1.6;
     --transition: all 0.3s ease-in-out;
+    --nav-height: 60px
   }
 `;
 export default GlobalStyles;

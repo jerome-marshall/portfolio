@@ -23,7 +23,7 @@ export const AboutContent = styled.div`
   grid-template-columns: 3fr 2fr;
   justify-content: center;
   align-items: center;
-  color: var(--color-white);
+  color: var(--white);
 `;
 
 export const AboutSummary = styled.div`
@@ -32,7 +32,7 @@ export const AboutSummary = styled.div`
   flex: auto;
 
   & > h2 {
-    color: var(--color-white);
+    color: var(--white);
     margin: var(--margin-md);
     font-size: var(--fz-heading-sm);
   }
@@ -43,7 +43,7 @@ export const AboutSummary = styled.div`
   }
 
   & p {
-    color: var(--color-grey-300);
+    color: var(--grey-300);
     font-size: var(--fz-md);
     line-height: var(--line-height-sm);
   }
@@ -59,7 +59,7 @@ export const AboutSummary = styled.div`
     list-style: none;
 
     li {
-      color: var(--color-white);
+      color: var(--white);
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
