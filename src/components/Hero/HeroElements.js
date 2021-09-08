@@ -83,7 +83,11 @@ export const Button = styled.button`
   transition: var(--transition);
 
   &:hover {
-    background: #fff;
+    background: var(--white);
     color: #010606;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1rem 1.5rem;
   }
 `;

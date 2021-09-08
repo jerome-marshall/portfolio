@@ -81,8 +81,6 @@ export const ProjectLI = styled.li`
   }
 
   & .rightIcons {
-    /* grid-area: "rightIcon"; */
-    /* background-color: chartreuse; */
     justify-self: end;
     align-self: center;
     /* padding-left: 10px; */
@@ -104,9 +102,6 @@ export const ProjectLI = styled.li`
   }
 
   & .content {
-    /* background-color: coral; */
-
-    /* grid-area: "content"; */
     grid-column: 1/3;
 
     & h3.title {
@@ -130,6 +125,9 @@ export const ProjectLI = styled.li`
   }
 
   & li {
+    /* width: 25%;
+    float: right; */
+
     color: var(--grey-500);
     font-size: var(--fz-xs);
     padding: 10px;
@@ -138,6 +136,13 @@ export const ProjectLI = styled.li`
     display: inline;
     justify-self: end;
     align-self: end;
+
+    /* @media (max-width: 1000px) {
+      float: right;
+      :nth-child(3n + 4) {
+        clear: left;
+      }
+    } */
   }
 
   :hover {
@@ -145,10 +150,6 @@ export const ProjectLI = styled.li`
     & h3.title,
     li {
       color: #0088ff;
-    }
-
-    @media (max-width: 480px) {
-      transform: translateX(-7px);
     }
   }
 `;
