@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledAboutSection = styled.section`
   max-width: 100%;
   height: 100vh;
-  background: #0c0c0c;
+  background: var(--background-dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,22 +11,31 @@ export const StyledAboutSection = styled.section`
 
   @media (max-width: 768px) {
     display: block;
+    height: auto;
   }
 `;
 
 export const AboutContent = styled.div`
   z-index: 3;
-  max-width: var(--max-width);
-  position: absolute;
+  max-width: calc(var(--max-width) - 50px);
+  position: relative;
   display: grid;
   /* border: 3px solid white; */
   grid-template-columns: 3fr 2fr;
   justify-content: center;
   align-items: center;
   color: var(--white);
+
+  @media (max-width: 480px) {
+    display: block;
+  }
+  @media (max-width: 1000px) {
+    display: block;
+  }
 `;
 
 export const AboutSummary = styled.div`
+  /* background-color: coral; */
   display: flex;
   flex-direction: column;
   flex: auto;
@@ -38,8 +47,8 @@ export const AboutSummary = styled.div`
   }
 
   & div.summary {
-    padding: 12px 0;
-    margin: 0 var(--margin-md);
+    padding: 12px 24px;
+    /* margin: 0 var(--margin-md); */
   }
 
   & p {
@@ -57,6 +66,10 @@ export const AboutSummary = styled.div`
     /* list-style-position: inside; */
     overflow: hidden;
     list-style: none;
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+    }
 
     li {
       color: var(--white);
@@ -87,26 +100,26 @@ export const AboutSummary = styled.div`
 `;
 
 export const StyledPic = styled.div`
-  position: relative;
+  position: flex;
+  justify-content: center;
+  padding: 30px 0px;
 
-  max-width: 340px;
+  /* max-width: 340px; */
 
   .wrapper {
-    background: violet;
     display: flex;
     position: relative;
     justify-content: center;
     width: 100%;
     border: none;
     border-radius: var(--border-radius);
-    background-color: black;
+    /* background-color: black; */
     box-shadow: 16px white;
 
     .img {
       max-width: 340px;
-      filter: none;
-      mix-blend-mode: normal;
-      vertical-align: middle;
+      /* filter: none; */
+      /* mix-blend-mode: normal; */
       border-radius: var(--border-radius);
       opacity: 0.4;
       box-shadow: 0 10px 30px -15px #fff;
@@ -115,6 +128,14 @@ export const StyledPic = styled.div`
       :hover {
         max-width: 350px;
         opacity: 1;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 240px;
+
+        :hover {
+          max-width: 250px;
+        }
       }
     }
   }

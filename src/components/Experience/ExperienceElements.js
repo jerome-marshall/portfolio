@@ -9,27 +9,36 @@ export const StyledExperienceSection = styled.section`
   align-items: center;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    /* background-color: turquoise; */
     display: block;
   }
 `;
 
 export const ExperienceContent = styled.div`
   z-index: 3;
-  width: 700px;
+  /* width: 700px; */
+  max-height: 100%;
+  /* margin: 100px var(--margin-md); */
   /* height: 700px; */
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   /* border: 3px solid white; */
-  justify-content: center;
+  /* justify-content: flex-start; */
   align-items: flex-start;
   color: var(--white);
+  padding: var(--margin-md);
 
   & > h2 {
     color: var(--white);
     margin: var(--margin-md) 0;
     font-size: var(--fz-heading-sm);
+  }
+
+  @media (max-width: 480px) {
+    display: block;
+    top: 80px;
   }
 `;
 
@@ -39,6 +48,11 @@ export const Container = styled.div`
   height: 250px;
   flex-direction: row;
   margin: 20px 0px;
+
+  @media (max-width: 480px) {
+    padding-top: 5px;
+    display: block;
+  }
 `;
 
 export const TabsContainer = styled.div`
@@ -48,11 +62,11 @@ export const TabsContainer = styled.div`
 
 export const TabPanelContainer = styled.div`
   margin-left: 30px;
+  width: 600px;
 
   /* & p {
     margin-left: -20px;
   } */
-
   & h3 {
     color: skyblue;
     .title {
@@ -106,6 +120,14 @@ export const TabPanelContainer = styled.div`
       /* line-height: 15px; */
     }
   }
+
+  @media (max-width: 480px) {
+    margin: 30px 0;
+  }
+
+  @media (max-width: 820px) {
+    width: 100%;
+  }
 `;
 
 export const TabHeaderContainer = styled.div`
@@ -148,20 +170,37 @@ export const StylizedTab = styled.button`
     `}
 
   :hover {
-    /* transition: all 1s ease-in-out; */
     background-color: #333;
     color: var(--white);
+  }
+
+  @media (max-width: 480px) {
+    border: none;
+    border-bottom: 3px solid var(--grey-900);
+
+    ${(p) =>
+      p.active &&
+      css`
+        border-bottom: 3px solid white;
+      `}
+
+    :hover {
+      background-color: transparent;
+    }
   }
 `;
 
 export const StyledTabPanel = styled.div`
+  background-color: tomato;
+  position: relative;
   display: ${(p) => (p.active ? "flex" : "none")};
-  /* font-size: 4rem; */
   background: var(--background-dark);
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   justify-content: flex-start;
+
+  @media (max-width: 480px) {
+    /* width: 350px; */
+  }
 `;
 
 export const TabPanelContent = styled.div``;
@@ -169,4 +208,8 @@ export const TabPanelContent = styled.div``;
 export const TabsHolder = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 480px) {
+    flex-direction: row;
+  }
 `;

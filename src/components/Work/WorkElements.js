@@ -5,12 +5,12 @@ export const StyledWorkSection = styled.section`
   flex-direction: column;
   max-width: 100%;
   /* height: 100vh; */
+  padding-top: 70px;
   background: var(--background-dark);
   justify-content: flex-start;
   align-items: center;
   position: relative;
   color: var(--white);
-  padding: var(--nav-height) 0;
 
   @media (max-width: 768px) {
     display: block;
@@ -20,13 +20,13 @@ export const StyledWorkSection = styled.section`
 export const WorkContent = styled.div`
   z-index: 3;
   max-width: var(--max-width);
-  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   /* border: 3px solid white; */
   justify-content: center;
   align-items: center;
+  margin: 0 24px;
 
   & > h2 {
     color: var(--white);
@@ -42,6 +42,16 @@ export const WorkContent = styled.div`
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(300px, auto);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      /* grid-auto-rows: minmax(300px, auto); */
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+      /* grid-auto-rows: minmax(300px, auto); */
+    }
   }
 `;
 
@@ -135,6 +145,10 @@ export const ProjectLI = styled.li`
     & h3.title,
     li {
       color: #0088ff;
+    }
+
+    @media (max-width: 480px) {
+      transform: translateX(-7px);
     }
   }
 `;
