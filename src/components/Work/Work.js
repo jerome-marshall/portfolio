@@ -7,7 +7,7 @@ import { projectData } from "../../data/projectData";
 
 const Work = () => {
   return (
-    <StyledWorkSection>
+    <StyledWorkSection id="work">
       <WorkContent>
         <h2>Some things I've built</h2>
         <ul className="project-grid">

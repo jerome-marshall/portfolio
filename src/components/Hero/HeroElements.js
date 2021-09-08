@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
@@ -71,7 +72,7 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   margin-top: 3rem;
   color: #fff;
   background: transparent;

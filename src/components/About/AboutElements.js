@@ -16,6 +16,7 @@ export const StyledAboutSection = styled.section`
 `;
 
 export const AboutContent = styled.div`
+  padding-top: var(--nav-height);
   z-index: 3;
   max-width: calc(var(--max-width) - 50px);
   position: relative;

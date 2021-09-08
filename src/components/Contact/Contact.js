@@ -3,7 +3,7 @@ import { ContactContainer, ContactContent, Button } from "./ContactElements";
 
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <ContactContent>
         <p className="sub-title">What's Next?</p>
         <h2 className="title">Get In Touch</h2>

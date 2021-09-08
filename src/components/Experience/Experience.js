@@ -17,7 +17,7 @@ const Experience = () => {
   };
 
   return (
-    <StyledExperienceSection>
+    <StyledExperienceSection id="experience">
       <div className="container">
         <ExperienceContent>
           <h2 className="nav-heading">Where I've worked</h2>
