@@ -3,7 +3,7 @@ import { HeroContainer, HeroContent, Button } from "./HeroElements";
 
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <HeroContent>
         <p className="myNameIs">Hi, my name is</p>
         <h1 className="name">Jerome Marshall.</h1>
@@ -14,7 +14,10 @@ const Hero = () => {
           oppurtunity where I can make the best use of my technical skills for
           the better.
         </p>
-        <Button>Get in touch</Button>
+
+        <Button to="contact" smooth={true} duration={1000}>
+          Get in touch
+        </Button>
       </HeroContent>
     </HeroContainer>
   );

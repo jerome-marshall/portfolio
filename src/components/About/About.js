@@ -20,7 +20,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <StyledAboutSection>
+    <StyledAboutSection id="about">
       <AboutContent>
         <AboutSummary>
           <h2 className="nav-heading">About Me</h2>
