@@ -16,16 +16,16 @@ export const StyledAboutSection = styled.section`
 `;
 
 export const AboutContent = styled.div`
-  padding-top: var(--nav-height);
-  z-index: 3;
-  max-width: calc(var(--max-width) - 50px);
   position: relative;
-  display: grid;
-  /* border: 3px solid white; */
-  grid-template-columns: 3fr 2fr;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  max-width: calc(var(--max-width) - 50px);
+
+  & > h2 {
+    color: var(--white);
+    padding: var(--margin-md);
+    font-size: var(--fz-heading-sm);
+  }
 
   @media (max-width: 480px) {
     display: block;
@@ -35,17 +35,26 @@ export const AboutContent = styled.div`
   }
 `;
 
+export const Container = styled.div`
+  /* padding-top: var(--nav-height); */
+  z-index: 3;
+  max-width: calc(var(--max-width) - 50px);
+  position: relative;
+  display: grid;
+
+  /* border: 3px solid white; */
+  grid-template-columns: 3fr 2fr;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const AboutSummary = styled.div`
   /* background-color: coral; */
   display: flex;
   flex-direction: column;
   flex: auto;
-
-  & > h2 {
-    color: var(--white);
-    margin: var(--margin-md);
-    font-size: var(--fz-heading-sm);
-  }
 
   & div.summary {
     padding: 12px 24px;
@@ -101,38 +110,46 @@ export const AboutSummary = styled.div`
 `;
 
 export const StyledPic = styled.div`
-  position: flex;
-  justify-content: center;
-  padding: 30px 0px;
-
-  /* max-width: 340px; */
+  /* background-color: aquamarine; */
+  max-height: 100%;
+  max-width: 310px;
+  position: relative;
+  align-self: flex-start;
+  padding: 12px 0;
+  justify-self: center;
 
   .wrapper {
+    /* background-color: red;
+
     display: flex;
     position: relative;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     border: none;
     border-radius: var(--border-radius);
-    /* background-color: black; */
-    box-shadow: 16px white;
+    box-shadow: 16px white; */
 
     .img {
-      max-width: 340px;
+      /* max-width: 300px; */
       /* filter: none; */
       /* mix-blend-mode: normal; */
+      max-width: 100%;
+      max-height: 100%;
       border-radius: var(--border-radius);
       opacity: 0.4;
+      object-fit: contain;
       box-shadow: 0 10px 30px -15px #fff;
       transition: all 500ms ease-in-out;
 
       :hover {
-        max-width: 350px;
+        max-width: 320px;
         opacity: 1;
       }
 
       @media (max-width: 480px) {
         max-width: 240px;
+        margin: 12px;
 
         :hover {
           max-width: 250px;
