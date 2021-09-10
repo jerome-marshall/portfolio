@@ -27,6 +27,7 @@ export const WorkContent = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 24px;
+  /* overflow: hidden; */
 
   & > h2 {
     color: var(--white);
@@ -48,7 +49,7 @@ export const WorkContent = styled.div`
       /* grid-auto-rows: minmax(300px, auto); */
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 510px) {
       grid-template-columns: repeat(1, 1fr);
       /* grid-auto-rows: minmax(300px, auto); */
     }
@@ -75,21 +76,25 @@ export const ProjectLI = styled.li`
     /* padding: 10px; */
 
     & svg {
+      background-color: var(--background-dark-highlight);
       width: 40px;
       height: 40px;
     }
   }
 
   & .rightIcons {
+    background-color: var(--background-dark-highlight);
     justify-self: end;
     align-self: center;
     /* padding-left: 10px; */
 
     & a {
+      background-color: var(--background-dark-highlight);
       color: var(--white);
     }
 
     & svg {
+      background-color: var(--background-dark-highlight);
       margin-right: 10px;
       width: 22px;
       height: 22px;
@@ -102,15 +107,18 @@ export const ProjectLI = styled.li`
   }
 
   & .content {
+    background-color: var(--background-dark-highlight);
     grid-column: 1/3;
 
     & h3.title {
+      background-color: var(--background-dark-highlight);
       margin: 20px 0 10px 0;
       font-size: var(--fz-xl);
       transition: var(--transition);
     }
 
     & p.description {
+      background-color: var(--background-dark-highlight);
       color: var(--grey-300);
       margin-bottom: 30px;
     }
@@ -118,6 +126,7 @@ export const ProjectLI = styled.li`
 
   & ul {
     /* background-color: cadetblue; */
+    background-color: var(--background-dark-highlight);
     grid-column: 1/3;
     justify-self: end;
     align-self: end;
@@ -125,6 +134,7 @@ export const ProjectLI = styled.li`
   }
 
   & li {
+    background-color: var(--background-dark-highlight);
     /* width: 25%;
     float: right; */
 
@@ -137,12 +147,26 @@ export const ProjectLI = styled.li`
     justify-self: end;
     align-self: end;
 
-    /* @media (max-width: 1000px) {
+    @media (max-width: 1000px) {
       float: right;
       :nth-child(3n + 4) {
         clear: left;
       }
-    } */
+    }
+
+    @media (max-width: 510px) {
+      float: none;
+      :nth-child(3n + 4) {
+        clear: none;
+      }
+    }
+
+    @media (max-width: 360px) {
+      float: right;
+      :nth-child(3n + 4) {
+        clear: left;
+      }
+    }
   }
 
   :hover {

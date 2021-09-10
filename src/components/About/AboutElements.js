@@ -19,11 +19,12 @@ export const AboutContent = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: var(--margin-md);
   max-width: calc(var(--max-width) - 50px);
 
   & > h2 {
     color: var(--white);
-    padding: var(--margin-md);
+    padding: var(--margin-md) 0;
     font-size: var(--fz-heading-sm);
   }
 
@@ -45,7 +46,7 @@ export const Container = styled.div`
   /* border: 3px solid white; */
   grid-template-columns: 3fr 2fr;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -57,7 +58,7 @@ export const AboutSummary = styled.div`
   flex: auto;
 
   & div.summary {
-    padding: 12px 24px;
+    padding: 12px 0;
     /* margin: 0 var(--margin-md); */
   }
 
@@ -72,7 +73,7 @@ export const AboutSummary = styled.div`
     grid-template-columns: repeat(3, minmax(140px, 200px));
     grid-gap: 0 10px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin-top: 20px;
     /* list-style-position: inside; */
     overflow: hidden;
     list-style: none;
@@ -116,6 +117,7 @@ export const StyledPic = styled.div`
   position: relative;
   align-self: flex-start;
   padding: 12px 0;
+  margin: 0 24px;
   justify-self: center;
 
   .wrapper {
@@ -147,6 +149,14 @@ export const StyledPic = styled.div`
         opacity: 1;
       }
 
+      @media (max-width: 768px) {
+        max-width: 270px;
+        margin: 12px;
+
+        :hover {
+          max-width: 280px;
+        }
+      }
       @media (max-width: 480px) {
         max-width: 240px;
         margin: 12px;
