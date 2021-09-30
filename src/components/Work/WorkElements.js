@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { landScapeMediaQueries } from "../../GlobalStyles";
 
 export const StyledWorkSection = styled.section`
   display: flex;
@@ -15,6 +16,7 @@ export const StyledWorkSection = styled.section`
   @media (max-width: 768px) {
     display: block;
   }
+  /* ${landScapeMediaQueries} */
 `;
 
 export const WorkContent = styled.div`

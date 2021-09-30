@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { landScapeMediaQueries } from "../../GlobalStyles";
 
 export const StyledAboutSection = styled.section`
   max-width: 100%;
@@ -13,6 +14,8 @@ export const StyledAboutSection = styled.section`
     display: block;
     height: auto;
   }
+
+  ${landScapeMediaQueries}
 `;
 
 export const AboutContent = styled.div`

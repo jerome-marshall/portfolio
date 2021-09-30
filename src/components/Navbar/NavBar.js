@@ -46,7 +46,12 @@ const NavBar = ({ toggle }) => {
               </NavLinks>
             </NavItem>
             <NavBtn>
-              <NavBtnLink to="/resume">Reusme</NavBtnLink>
+              <NavBtnLink
+                href="https://drive.google.com/file/d/1eh_IK2jKvSl-f7UvOLKPq-A6GfEOHd1I/view?usp=sharing"
+                target="_blank"
+              >
+                Reusme
+              </NavBtnLink>
             </NavBtn>
           </NavMenu>
         </NavbarContainer>

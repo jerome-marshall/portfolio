@@ -22,8 +22,7 @@ const crypto2k18 = {
     "A native android application which was created for an event in my UG. Has a custom built UI wtih many cool animations",
   techStack: ["Java", "Kotlin"],
   git: "https://github.com/jerome-marshall/Crypto2k18",
-  ext: "https://github.com/jerome-marshall/Crypto2k18",
-  // ext: "https://play.google.com/store/apps/details?id=com.jeromemarshall.crypto2k18",
+  ext: "https://play.google.com/store/apps/details?id=com.jeromemarshall.crypto2k18",
 };
 
 const zeroHub = {

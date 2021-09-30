@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { landScapeMediaQueries } from "../../GlobalStyles";
 
 export const ContactContainer = styled.div`
   background: var(--background-dark);
@@ -9,6 +10,8 @@ export const ContactContainer = styled.div`
   height: 100vh;
   position: relative;
   z-index: 1;
+
+  ${landScapeMediaQueries}
 `;
 
 export const ContactContent = styled.div`
@@ -58,7 +61,7 @@ export const ContactContent = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const StyledA = styled.a`
   margin: 0 auto;
   position: relative;
   margin-top: 3rem;
@@ -66,6 +69,7 @@ export const Button = styled.button`
   background: transparent;
   font-size: 18px;
   text-align: center;
+  text-decoration: none;
   border-radius: var(--border-radius);
   border: solid white;
   padding: 1rem 1.75rem;
@@ -74,5 +78,9 @@ export const Button = styled.button`
   &:hover {
     background: var(--white);
     color: #010606;
+  }
+
+  &:visited {
+    text-decoration: none;
   }
 `;

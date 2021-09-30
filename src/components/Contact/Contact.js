@@ -1,5 +1,5 @@
 import React from "react";
-import { ContactContainer, ContactContent, Button } from "./ContactElements";
+import { ContactContainer, ContactContent, StyledA } from "./ContactElements";
 
 const Contact = () => {
   return (
@@ -8,11 +8,11 @@ const Contact = () => {
         <p className="sub-title">What's Next?</p>
         <h2 className="title">Get In Touch</h2>
         <p className="description">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quae
-          dolores tenetur maxime molestiae cumque magnam nihil odio repellat
-          nostrum, voluptatum ipsum quisquam atque
+          Currently I'm looking forward for challenging oppurtutnities and I'm
+          open to your call! My mailbox always welcomes your interest. I’ll try
+          my best to get back to you!
         </p>
-        <Button>Say Hello</Button>
+        <StyledA href={`mailto:jeromemarshall0@gmail.com`}>Say Hello</StyledA>
       </ContactContent>
     </ContactContainer>
   );

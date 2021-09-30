@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
+
       <Router>
         <Home></Home>
       </Router>

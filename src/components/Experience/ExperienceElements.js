@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { landScapeMediaQueries } from "../../GlobalStyles";
 
 export const StyledExperienceSection = styled.section`
   max-width: 100%;
@@ -13,6 +14,8 @@ export const StyledExperienceSection = styled.section`
     /* background-color: turquoise; */
     display: block;
   }
+
+  ${landScapeMediaQueries}
 `;
 
 export const ExperienceContent = styled.div`

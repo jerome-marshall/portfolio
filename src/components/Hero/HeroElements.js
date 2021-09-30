@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import styled from "styled-components";
+import { landScapeMediaQueries } from "../../GlobalStyles";
 
 export const HeroContainer = styled.div`
   background: var(--background-dark);
@@ -10,6 +11,8 @@ export const HeroContainer = styled.div`
   height: 100vh;
   position: relative;
   z-index: 1;
+
+  ${landScapeMediaQueries}
 `;
 
 export const HeroContent = styled.div`
