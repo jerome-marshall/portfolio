@@ -73,6 +73,7 @@ export const ProjectLI = styled.li`
   & .leftIcon {
     /* grid-area: "leftIcon"; */
     /* background-color: chocolate; */
+    background-color: var(--background-dark-highlight);
     justify-self: start;
     align-self: center;
     /* padding: 10px; */
