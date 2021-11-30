@@ -12,7 +12,9 @@ const Contact = () => {
           open to your call! My mailbox always welcomes your interest. I’ll try
           my best to get back to you!
         </p>
-        <StyledA href={`mailto:jeromemarshall0@gmail.com`}>Say Hello</StyledA>
+        <StyledA href={`mailto:jeromemarshall0@gmail.com`} target="_blank">
+          Say Hello
+        </StyledA>
       </ContactContent>
     </ContactContainer>
   );

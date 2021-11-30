@@ -8,15 +8,15 @@ import Work from "../components/Work/Work";
 import Contact from "../components/Contact/Contact";
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [SideBarIsOpen, setSideBarIsOpen] = useState(false);
 
   const toggle = () => {
-    setIsOpen(!isOpen);
+    setSideBarIsOpen(!SideBarIsOpen);
   };
 
   return (
     <>
-      <SideBar isOpen={isOpen} toggle={toggle}></SideBar>
+      <SideBar isOpen={SideBarIsOpen} toggle={toggle}></SideBar>
       <NavBar toggle={toggle}></NavBar>
 
       <div className="home">
